@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".", //I added this line to fix a ts error
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      // "@/*": ["./*"], // I also removed this line and added the line below to fix same ts error.
+      "next/*": ["node_modules/next/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
