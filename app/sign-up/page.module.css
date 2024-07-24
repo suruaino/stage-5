@@ -1,5 +1,4 @@
-
-.loginBtn{
+.signUpBtn{
     background: #633CFF;
     color: #ffffff;
     font-size: 16px;
@@ -9,18 +8,16 @@
     padding-block: 11px;
 
 }
-
 .form{
     font-family: var(--font-family-instrument-sans);
 }
 .form p{
     color: var(--color);
-    font-size: 16px;
+    /* font-size: 16px; */
+}
+.passwordEmphasis{
+    font-size: 12px;
 }
 .form p a{
     color: var(--default-btn-bg);
-}
-.form .form-main{
-    /* border: 1px solid var(--input-border); */
-    /* border: 1px solid #D9D9D9; */
 }

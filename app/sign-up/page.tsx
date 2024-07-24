@@ -1,9 +1,10 @@
-import Link from 'next/link'
+
+import Link from 'next/link';
 import Image from "next/image";
 import styles from "./page.module.css";
-import "./globals.css";
+import "../globals.css";
 
-export default function Home() {
+export default function SignUp() {
   return (
     <main
       className={`w-full py-8 flex flex-col items-center gap-16  ${styles.form}`}
@@ -13,8 +14,8 @@ export default function Home() {
       </div>
       <form className="form w-[310px] flex flex-col gap-8">
         <div className="header flex flex-col gap-3">
-          <h2 className="font-bold text-2xl">Login</h2>
-          <p className="text-base">Add your details below to get back into the app</p>
+          <h2 className="font-bold text-2xl">Create account</h2>
+          <p className="text-base">Let's get you started sharing your links!</p>
         </div>
 
         <div className="form-main flex flex-col gap-6">
@@ -39,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <div className="password-box flex flex-col gap-1 relative">
-            <label className="text-xs">Password</label>
+            <label className="text-xs">Create password</label>
             <div className="password-input px-4 py-3 flex items-center justify-between gap-0 relative border border-gray-300  rounded-md">
               <div className="flex items-center gap-2">
                 <Image
@@ -51,7 +52,7 @@ export default function Home() {
                 />
                 <input
                   type="password"
-                  placeholder="Enter password"
+                  placeholder="At least 8 characters"
                   className="text-xs"
                 />
               </div>
@@ -61,11 +62,34 @@ export default function Home() {
           
             </div>
           </div>
-          {/* <button className={`${styles.loginBtn}`}>Login</button> */}
-          <Link href="" className={`flex justify-center ${styles.loginBtn}`}>Login</Link>
+          <div className="password-box flex flex-col gap-1 relative">
+            <label className="text-xs">Confirm password</label>
+            <div className="password-input px-4 py-3 flex items-center justify-between gap-0 relative border border-gray-300  rounded-md">
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/padlock.svg"
+                  alt="Padlock Icon"
+                  width={13}
+                  height={10}
+                  // className="absolute bottom-1"
+                />
+                <input
+                  type="password"
+                  placeholder="At least 8 characters"
+                  className="text-xs"
+                />
+              </div>
+              <label id="password-error" className="text-xs text-red-500 hidden">
+                Please check again
+              </label>
+          
+            </div>
+          </div>
+          <p className={`${styles.passwordEmphasis}`}>Password must contain at least 8 characters</p>
+          <button className={`${styles.signUpBtn}`}>Create new account</button>
         </div>
         <p className="flex flex-col items-center">
-          Don't have an account? <Link href="/sign-up">Create account</Link>
+          Already have an account? <Link href="/">Login</Link>
         </p>
       </form>
     </main>
