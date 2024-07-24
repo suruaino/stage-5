@@ -1,8 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import CustomSelect from "../../components/link-customization/LinkOptions";
 import "../globals.css";
 
 export default function Customize() {
+    const defaultOptions: Option[] = [
+        { text: 'GitHub', icon: '/icons/github.svg' },
+        { text: 'YouTube', icon: '/icons/youtube.svg' },
+        { text: 'LinkedIn', icon: '/icons/linkedin.svg' },
+      ];
+
   return (
     <main
       className={`w-full h- py-8 px-8 flex flex-col md:flex-row items-center gap-16 ${styles.form} ${styles.main}`}
@@ -21,6 +28,22 @@ export default function Customize() {
         </div>
         <div className="bottom h-full text-center flex flex-col justify-between items-center gap-10">
             <button className={`font-semibold ${styles.borderClr}`}>+ Add new link</button>
+            
+            <div className="link-input-comp w-full">
+                <div className="box-head text-gray-500 flex justify-between">
+                    <span>= Link #1</span>
+                    <button>Remove</button>
+                </div>
+                <div className="link-input-container">
+                    <div className="platform flex flex-col items-start">
+                        <label htmlFor="">Platform</label>
+                        <CustomSelect options={defaultOptions} />
+
+                    </div>
+                </div>
+            
+            </div>
+
             <div className={`description flex flex-col items-center gap-8 ${styles.description}`}>
                 <Image src="/description-icon.png" alt="" width={124.77} height={80} className="" />
                 <h2 className="text-2xl font-bold">Lets get you started</h2>
