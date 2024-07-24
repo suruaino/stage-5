@@ -1,0 +1,36 @@
+.main{
+    font-family: var(--font-family-instrument-sans);
+    color: #000;
+
+}
+.description{
+    width: 100%;
+    max-width: 83%;
+}
+.main p{
+    color: var(--color);
+    font-size: 16px;
+}
+.borderClr{
+    color: var(--default-btn-bg);
+    height: 46px;
+    width: 100%;
+    border: 1px solid var(--default-btn-bg);
+    border-radius: 5px;
+}
+.saveBtn{
+    background: var(--disabled-btn-bg);
+    color: #ffffff;
+    font-size: 16px;
+    height: 46px;
+    /* width: 100%; */
+    border-radius: 5px;
+    /* padding-block: 11px; */
+    /* background: var(--default-btn-bg); */
+}
+
+@media (width > 375px ) and ( width <= 768px ) {
+    .description{
+        max-width: 74%;
+    }
+}

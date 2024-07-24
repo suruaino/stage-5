@@ -1,3 +1,6 @@
+.linkP{
+    color: var(--default-btn-bg);
+}
 .borderClr{
     border: 1px solid var(--default-btn-bg);
 }

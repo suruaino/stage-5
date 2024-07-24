@@ -11,19 +11,28 @@ export default function CustomizationLayout({
         {/* Include shared UI here e.g. a header or sidebar */}
         <nav className="px-4 pt-4 flex justify-between">
             <div className="left">
-                <span className="w-[52px] h-10 flex justify-center items-center rounded-md">
+                <span className=" h-10 flex justify-center items-center rounded-md gap-1">
                     <Image
                     src="/mini-logo.png"
                     alt="logo"
                     width={26.67}
                     height={26.67}
-                    className=""
+                    className="block md:hidden"
                     />
+
+                    <Image
+                    src="/logo.png"
+                    alt="logo"
+                    width={146}
+                    height={32}
+                    className="hidden md:block"
+                    />
+   
                 </span>
 
             </div>
-            <div className="center flex">
-                <span className="w-16 h-10 bg-gray-200 flex justify-center items-center rounded-md">
+            <div className="center flex gap-4">
+                <span className="w-16 md:w-24 h-10 bg-gray-200 md:px-7 flex justify-center items-center gap-2 rounded-md">
                 <Image
                   src="/share-icon.svg"
                   alt="share Icon"
@@ -31,8 +40,9 @@ export default function CustomizationLayout({
                   height={15.63}
                   className=""
                 />
+                <p className={`hidden md:block ${styles.linkP}`}>Links</p>
                 </span>
-                <span className="w-16 h-10 flex justify-center items-center rounded-md">
+                <span className="w-16 md:w-auto h-10 flex justify-center items-center gap-2 rounded-md">
                     <Image
                     src="/user-icon.png"
                     alt="logo"
@@ -40,17 +50,19 @@ export default function CustomizationLayout({
                     height={16.88}
                     className=""
                     />
+                    <p className="text-base text-gray-500 font-semibold hidden md:block">Profile details</p>
                 </span>
             </div>
             <div className="right">
-                <span className={`w-[52px] h-10 flex justify-center items-center rounded-md ${styles.borderClr}`}>
+                <span className={`w-[52px] md:w-24 h-10 flex justify-center items-center rounded-md ${styles.borderClr}`}>
                     <Image
                     src="/eye-icon.svg"
                     alt="Eye Icon"
                     width={19.38}
                     height={13.13}
-                    className=""
+                    className="md:hidden"
                     />
+                    <p className={`hidden md:block ${styles.linkP}`}>Preview</p>
                 </span>
             </div>
         </nav>
